@@ -36,10 +36,10 @@ foreach ($webapp in $webapplications)
                         Site = $web.Url
                         List = $list.Title
                         ListId = $list.Id
-                        ItemCount = $($list.Items.Count)+$($list.folders.count)
+                        ItemCount = $($list.Items.Count)+$($list.Folders.Count)
                         LastItemModified = $list.LastItemModifiedDate
                         DetectionType = $detectionType
-                    } | Export-Csv -Path $OutPath -Append -NoTypeInformation -Delimiter "`t" -Encoding UTF8
+                    } | Export-Csv -Path $OutPath -Append -NoTypeInformation -Delimiter "`t"
                 }
             }
             $web.Dispose()
