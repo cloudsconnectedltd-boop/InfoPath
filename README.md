@@ -33,10 +33,10 @@ Exports a tab-delimited CSV to the path specified by `-OutPath` with the followi
 ## Usage
 ```powershell
 # Scan all web applications
-.\Get-InfoPathType.ps1 -OutPath "C:\resultsInfoPath.csv"
+.\Get-InfoPathType.ps1 -OutPath "$env:TEMP\InfoPath.csv"
 
 # Exclude specific web applications
-.\Get-InfoPathType.ps1 -OutPath "C:\resultsInfoPath.csv" -ExcludedWebApps "Legacy", "MySites"
+.\Get-InfoPathType.ps1 -OutPath "$env:TEMP\InfoPath.csv" -ExcludedWebApps "Central Admin", "MySites"
 ```
 
 > `ExcludedWebApps` values must match the web application **Name** field exactly as it appears in Central Administration, not the URL.
