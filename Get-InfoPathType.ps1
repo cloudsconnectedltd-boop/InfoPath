@@ -14,12 +14,12 @@
 .PARAMETER ExcludedWebApps
     Optional. One or more web application display names to skip during the scan.
 
-.Example
+.EXAMPLE
     .\Get-InfoPathType.ps1 -OutPath "$env:TEMP\InfoPath.csv"
     
     Run in SharePoint Management Shell. Scans all web applications.
 
-.Example
+.EXAMPLE
     .\Get-InfoPathType.ps1 -OutPath "$env:TEMP\InfoPath.csv" -ExcludedWebApps "Central Admin", "MySites"
 
     Run in SharePoint Management Shell. Scans all web applications except Central Admin and MySites
@@ -29,7 +29,7 @@
     Requires :  SharePoint Management Shell (Microsoft.SharePoint.PowerShell snap-in)
                 Run from a SharePoint server with Farm Administrator permissions.
 .OUTPUTS
-    CSV file with columns: site, ListTitle, ListId, ItemCount, LastItemModified, DetectionType
+    CSV file with columns: Site, ListTitle, ListId, ItemCount, LastItemModified, DetectionType
 #>
 
 
@@ -101,4 +101,4 @@ foreach ($webapp in $webapplications)
 }
 
 
-Write-Host "Output file in "
+Write-Host "Output file in $($OutPath)"
