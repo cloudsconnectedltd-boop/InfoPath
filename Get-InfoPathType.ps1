@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Scans SharePoint on-premises web application for InforPath usage.
+    Scans SharePoint on-premises web application for InfoPath usage.
 
 .DESCRIPTION
     Iterates through all site collections and webs across SharePoint on-premises web applications to identify lists using InfoPath forms.
